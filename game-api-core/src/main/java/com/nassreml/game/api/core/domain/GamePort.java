@@ -4,4 +4,6 @@ public interface GamePort {
     Game createGame(CreateGame game) throws GameAlreadyExistsException;
 
     Game findGame(Long id) throws GameNotFoundException;
+
+    Game updateGame(Game updatedGame);
 }

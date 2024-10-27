@@ -10,7 +10,7 @@ public class GameMapper {
         return new CreateGame(createGameDto.name(), createGameDto.userId());
     }
 
-    public static GameDto toDto(Game createGame) {
-        return new GameDto(createGame.id(), createGame.name(), createGame.userId());
+    public static GameDto toDto(Game game) {
+        return new GameDto(game.id(), game.name(), game.userId());
     }
 }

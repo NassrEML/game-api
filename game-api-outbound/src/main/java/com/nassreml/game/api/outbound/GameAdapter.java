@@ -21,4 +21,9 @@ public class GameAdapter implements GamePort {
         }
         return new Game(id, "Nassr", 1L);
     }
+
+    @Override
+    public Game updateGame(Game updatedGame) {
+        return updatedGame;
+    }
 }

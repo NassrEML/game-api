@@ -5,4 +5,7 @@ public record Game(
         String name,
         Long userId
 ) {
+    public Game update(UpdatableFields updatableFields) {
+        return new Game(id, updatableFields.name(), userId);
+    }
 }
