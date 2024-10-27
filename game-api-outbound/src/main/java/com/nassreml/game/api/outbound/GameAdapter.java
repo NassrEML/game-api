@@ -1,9 +1,6 @@
 package com.nassreml.game.api.outbound;
 
-import com.nassreml.game.api.core.domain.CreateGame;
-import com.nassreml.game.api.core.domain.Game;
-import com.nassreml.game.api.core.domain.GameAlreadyExistsException;
-import com.nassreml.game.api.core.domain.GamePort;
+import com.nassreml.game.api.core.domain.*;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,5 +12,13 @@ public class GameAdapter implements GamePort {
             throw new GameAlreadyExistsException("Game with name " + game.name() + " already exists");
         }
         return new Game(1L, game.name(), game.userId());
+    }
+
+    @Override
+    public Game findGame(Long id) {
+        if (id == 1L) {
+            throw new GameNotFoundException("Game with id " + id + " not found");
+        }
+        return new Game(id, "Nassr", 1L);
     }
 }
