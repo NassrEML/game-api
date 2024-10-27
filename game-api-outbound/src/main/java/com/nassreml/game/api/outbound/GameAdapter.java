@@ -26,4 +26,9 @@ public class GameAdapter implements GamePort {
     public Game updateGame(Game updatedGame) {
         return updatedGame;
     }
+
+    @Override
+    public void deleteGame(Long gameId) {
+        return;
+    }
 }

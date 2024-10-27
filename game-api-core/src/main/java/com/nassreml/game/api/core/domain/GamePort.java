@@ -6,4 +6,6 @@ public interface GamePort {
     Game findGame(Long id) throws GameNotFoundException;
 
     Game updateGame(Game updatedGame);
+
+    void deleteGame(Long gameId);
 }
