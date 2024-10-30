@@ -1,0 +1,15 @@
+meta {
+  name: Delete Chatarreo
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{host}}/api/v1/games/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}

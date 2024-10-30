@@ -1,0 +1,21 @@
+meta {
+  name: Update game
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/api/v1/games/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:json {
+  {
+      "name": "Nassr Eddine"
+  }
+}

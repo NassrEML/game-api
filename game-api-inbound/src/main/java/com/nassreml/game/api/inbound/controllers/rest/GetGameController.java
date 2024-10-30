@@ -23,7 +23,6 @@ public class GetGameController {
 
     @GetMapping("/{gameId}")
     public ResponseEntity<GameDto> getGame(@PathVariable(name = "gameId") Long gameId) {
-
         Game game = findGameQry.execute(gameId);
 
         GameDto gameDto = GameMapper.toDto(game);

@@ -1,0 +1,15 @@
+meta {
+  name: Find game
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/api/v1/games/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}

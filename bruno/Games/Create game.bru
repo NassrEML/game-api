@@ -1,0 +1,18 @@
+meta {
+  name: Create game
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/games
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "Nass",
+      "userId": 3
+  }
+}
